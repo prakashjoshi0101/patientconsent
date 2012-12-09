@@ -9,9 +9,7 @@
 </head>
 <body>
 	<h1>Finally ${username} ${password} are here!!!</h1>
-	<h4>sessionId: ${cookie.sessionId.value}</h4>
-	<h4>stepId: ${cookie.stepId.value}</h4>
-
+	<h1 style="color: green;">${hello}</h1>
 	<form method="GET" action="hello.htm">
 		<table>
 			<tr>
@@ -23,9 +21,7 @@
 					value="Call Hello Service!" /></td>
 			</tr>
 		</table>
-	</form>
-
-	<h1>${hello}</h1>
+	</form>	
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 package com.me.src;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,9 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.me.src.kerberos.servers.HelloClient;
 
 /**
  * Handles requests for the application home page.
@@ -34,19 +30,8 @@ public class HomeController {
 		
 		model.addAttribute("username", username);
 		model.addAttribute("password", password);
-		
-		Business business = Business.getInstance();
-		if (business.getAuthenticationServer().authenticateUserAccount(username, password) == true) {
-			HelloClient client = new HelloClient(username, password);
-			if (client.connect()) {
-				// on login add cookies
-				response.addCookie(new Cookie("username", username));
-				response.addCookie(new Cookie("sessionId", client.getSessionId()));
-				response.addCookie(new Cookie("stepId", Long.toString(client.getStepId())));
-				return "main";
-			}
-		}
-		return "login";
+				
+		return "main";
 	}
 	
 	@RequestMapping(value = "/home.htm", method = RequestMethod.GET)
