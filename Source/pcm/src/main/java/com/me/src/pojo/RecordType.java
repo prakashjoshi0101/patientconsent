@@ -10,5 +10,6 @@ public enum RecordType {
 	Cognitive { @Override public String toString() { return "Cognitive"; } },
 	Neurological { @Override public String toString() { return "Neurological"; } },
 	EyeNoseEar { @Override public String toString() { return "Eye Nose Ear"; } },
-	Immunization{ @Override public String toString() { return "Immunization"; } }	
+	Immunization{ @Override public String toString() { return "Immunization"; } },
+	Allergy{ @Override public String toString() { return "Allergy"; } }
 }
