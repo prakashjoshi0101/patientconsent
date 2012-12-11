@@ -11,7 +11,7 @@ public class UserAccount extends MappedModel {
 	private String role;
 	
 	@OneToOne
-	private Person person;
+	private Person person = new Person();
 	
 	public String getUsername() {
 		return username;

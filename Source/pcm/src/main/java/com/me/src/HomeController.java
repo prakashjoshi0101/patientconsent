@@ -13,8 +13,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.me.src.dao.ConsentDao;
+import com.me.src.dao.ConsentRequestDao;
+import com.me.src.dao.DoctorDao;
+import com.me.src.dao.HospitalDao;
+import com.me.src.dao.MedicalRecordDao;
+import com.me.src.dao.PatientDao;
 import com.me.src.dao.PersonDao;
+import com.me.src.dao.UserAccountDao;
+import com.me.src.pojo.Consent;
+import com.me.src.pojo.ConsentRequest;
+import com.me.src.pojo.Doctor;
+import com.me.src.pojo.Hospital;
+import com.me.src.pojo.MedicalRecord;
+import com.me.src.pojo.Patient;
 import com.me.src.pojo.Person;
+import com.me.src.pojo.UserAccount;
 
 /**
  * Handles requests for the application home page.
@@ -26,6 +40,21 @@ public class HomeController {
 	
 	@Autowired
 	PersonDao personDao;
+	@Autowired
+	DoctorDao doctorDao;
+	@Autowired
+	ConsentDao consentDao;
+	@Autowired
+	ConsentRequestDao consentRequestDao;
+	@Autowired
+	HospitalDao hospitalDao;
+	@Autowired
+	MedicalRecordDao medicalRecordDao;
+	@Autowired
+	PatientDao patientDao;
+	@Autowired
+	UserAccountDao userAccountDao;
+	
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -51,6 +80,14 @@ public class HomeController {
 		person.setSsn("123-45-678");
 		
 		personDao.saveOrUpdate(person);
+		
+		doctorDao.saveOrUpdate(new Doctor());
+		consentDao.saveOrUpdate(new Consent());
+		consentRequestDao.saveOrUpdate(new ConsentRequest());
+		hospitalDao.saveOrUpdate(new Hospital());
+		medicalRecordDao.saveOrUpdate(new MedicalRecord());
+		patientDao.saveOrUpdate(new Patient());
+		userAccountDao.saveOrUpdate(new UserAccount());
 		
 		return "main";
 	}

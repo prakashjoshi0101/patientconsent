@@ -6,21 +6,21 @@ import javax.persistence.OneToOne;
 @Entity
 public class ConsentRequest extends MappedModel {
 	@OneToOne
-	private Patient patient;
+	private Patient patient = new Patient();
 	private String consentType;
 	private String recordType;
 	
 	@OneToOne
-	private Hospital recordRequester; // entity trying to request medical records
+	private Hospital recordRequester = new Hospital(); // entity trying to request medical records
 	
 	@OneToOne
-	private Hospital recordProvider;  // entity who has medical records
+	private Hospital recordProvider = new Hospital();  // entity who has medical records
 	
 	@OneToOne
-	private UserAccount requestByUser;
+	private UserAccount requestByUser = new UserAccount();
 	
 	@OneToOne
-	private UserAccount respondByUser;
+	private UserAccount respondByUser = new UserAccount();
 	
 	public Patient getPatient() {
 		return patient;

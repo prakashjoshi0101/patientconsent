@@ -6,7 +6,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Patient extends MappedModel {
 	@OneToOne
-	private Person person;
+	private Person person = new Person();
 	private String photoFile;
 	
 	public Person getPerson() {

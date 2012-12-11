@@ -10,7 +10,7 @@ public class Person extends MappedModel {
 	private String firstName;
 	private String lastName;
 	private boolean gender;
-	private Date dob;
+	private Date dob = new Date();
 	private String address;
 	private String phone;
 	private String ssn;
