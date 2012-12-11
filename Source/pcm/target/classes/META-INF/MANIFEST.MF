@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: Goku
-Build-Jdk: 1.7.0_03
+Built-By: prakashj
+Build-Jdk: 1.6.0_37
 Created-By: Maven Integration for Eclipse
 

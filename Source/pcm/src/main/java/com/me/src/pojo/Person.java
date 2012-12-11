@@ -3,6 +3,7 @@ package com.me.src.pojo;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Person extends MappedModel {
@@ -15,6 +16,9 @@ public class Person extends MappedModel {
 	private String phone;
 	private String ssn;
 	private String emailId;	
+	
+	@OneToOne
+	private Hospital hospital;
 	
 	
 	public String getFirstName() {
@@ -64,5 +68,12 @@ public class Person extends MappedModel {
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
+	}
+	public Hospital getHospital() {
+		return hospital;
+	}
+	public void setHospital(Hospital hospital) {
+		this.hospital = hospital;
 	}	
+	
 }

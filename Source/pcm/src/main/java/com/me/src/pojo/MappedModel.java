@@ -2,24 +2,23 @@ package com.me.src.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @MappedSuperclass
 public abstract class MappedModel {
 	@Id
-	@GeneratedValue(generator = "system-uuid")
-	@GenericGenerator(name = "system-uuid", strategy = "uuid")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GenericGenerator(name = "system-uuid", strategy = "uuid")
 	@Column(name = "id")
-	private String id;
+	private long id;
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 		
