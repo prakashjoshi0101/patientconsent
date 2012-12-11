@@ -81,13 +81,13 @@ public class HomeController {
 		
 		personDao.saveOrUpdate(person);
 		
-		doctorDao.saveOrUpdate(new Doctor());
-		consentDao.saveOrUpdate(new Consent());
-		consentRequestDao.saveOrUpdate(new ConsentRequest());
-		hospitalDao.saveOrUpdate(new Hospital());
-		medicalRecordDao.saveOrUpdate(new MedicalRecord());
-		patientDao.saveOrUpdate(new Patient());
-		userAccountDao.saveOrUpdate(new UserAccount());
+//		doctorDao.saveOrUpdate(new Doctor());
+//		consentDao.saveOrUpdate(new Consent());
+//		consentRequestDao.saveOrUpdate(new ConsentRequest());
+//		hospitalDao.saveOrUpdate(new Hospital());
+//		medicalRecordDao.saveOrUpdate(new MedicalRecord());
+//		patientDao.saveOrUpdate(new Patient());
+//		userAccountDao.saveOrUpdate(new UserAccount());
 		
 		return "main";
 	}
