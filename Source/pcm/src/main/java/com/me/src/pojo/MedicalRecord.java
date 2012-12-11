@@ -2,13 +2,20 @@ package com.me.src.pojo;
 
 import java.util.Date;
 
-public class MedicalRecord {
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class MedicalRecord extends MappedModel {
+	@OneToOne
 	private Patient patient;
+	@OneToOne
 	private Doctor doctor;
 	private Date date;
 	private String description;
 	private String prescription;
 	private String recordType; // brain, accident, mental
+		
 	public Patient getPatient() {
 		return patient;
 	}

@@ -1,10 +1,16 @@
 package com.me.src.pojo;
 
-public class UserAccount {
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class UserAccount extends MappedModel {
 
 	private String username;
 	private String password;
 	private String role;
+	
+	@OneToOne
 	private Person person;
 	
 	public String getUsername() {
@@ -25,6 +31,13 @@ public class UserAccount {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
 	
 	
 }

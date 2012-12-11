@@ -1,7 +1,9 @@
 package com.me.src.pojo;
 
+import javax.persistence.Entity;
 
-public class Hospital {
+@Entity
+public class Hospital extends MappedModel {
 	private String name;
 	private String address;
 	private String phone;

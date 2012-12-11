@@ -1,6 +1,11 @@
 package com.me.src.pojo;
 
-public class Patient {
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Patient extends MappedModel {
+	@OneToOne
 	private Person person;
 	private String photoFile;
 	
