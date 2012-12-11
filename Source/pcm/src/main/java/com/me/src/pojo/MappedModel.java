@@ -22,4 +22,5 @@ public abstract class MappedModel {
 	public void setId(String id) {
 		this.id = id;
 	}
+		
 }
