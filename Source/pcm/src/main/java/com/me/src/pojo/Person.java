@@ -2,7 +2,11 @@ package com.me.src.pojo;
 
 import java.util.Date;
 
-public class Person {
+import javax.persistence.Entity;
+
+@Entity
+public class Person extends MappedModel {
+	
 	private String firstName;
 	private String lastName;
 	private boolean gender;
@@ -11,6 +15,7 @@ public class Person {
 	private String phone;
 	private String ssn;
 	private String emailId;	
+	
 	
 	public String getFirstName() {
 		return firstName;

@@ -7,7 +7,7 @@ public class Hospital {
 	private String phone;
 	//private ArrayList<Patient> patientList;
 	//private ArrayList<Doctor> doctorList;
-	
+
 	public String getName() {
 		return name;
 	}
