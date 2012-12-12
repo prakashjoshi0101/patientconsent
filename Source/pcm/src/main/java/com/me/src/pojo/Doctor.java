@@ -1,7 +1,12 @@
 package com.me.src.pojo;
 
-public class Doctor {
-	private Person person;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Doctor extends MappedModel {
+	@OneToOne
+	private Person person = new Person();
 
 	public Person getPerson() {
 		return person;

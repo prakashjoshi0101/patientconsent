@@ -1,2 +1,4 @@
-.class
+*.class
 .DS_store
+pom.properties
+Source/pcm/target/classes/META-INF/maven/com.me/src/pom.properties

@@ -76,14 +76,7 @@ public class Person extends MappedModel {
 	}
 	public void setHospital(Hospital hospital) {
 		this.hospital = hospital;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
-	
-	
+
+	}	
 	
 }
