@@ -5,12 +5,14 @@ import java.util.Date;
 public class Person {
 	private String firstName;
 	private String lastName;
-	private boolean gender;
+	private String gender;
 	private Date dob;
 	private String address;
 	private String phone;
 	private String ssn;
 	private String emailId;	
+	private String role;
+	
 	
 	public String getFirstName() {
 		return firstName;
@@ -24,10 +26,10 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public boolean isGender() {
+	public String isGender() {
 		return gender;
 	}
-	public void setGender(boolean gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public Date getDob() {
@@ -54,10 +56,17 @@ public class Person {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public String getEmailId() {
 		return emailId;
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
-	}	
+	}
+	
 }
