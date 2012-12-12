@@ -1,15 +1,13 @@
 package com.me.src.pojo;
 
-import javax.persistence.Entity;
 
-@Entity
-public class Hospital extends MappedModel {
+public class Hospital {
 	private String name;
 	private String address;
 	private String phone;
 	//private ArrayList<Patient> patientList;
 	//private ArrayList<Doctor> doctorList;
-
+	
 	public String getName() {
 		return name;
 	}

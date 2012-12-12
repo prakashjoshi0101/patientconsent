@@ -1,6 +1,9 @@
-*.class
+.class
 .DS_store
+<<<<<<< HEAD
 pom.properties
 Source/pcm/target/classes/META-INF/maven/com.me/src/pom.properties
 
 Source/pcm/target/classes/META-INF/maven/com.me/src/pom.properties
+=======
+>>>>>>> parent of 2428c1c... .
