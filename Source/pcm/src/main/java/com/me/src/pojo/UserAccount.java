@@ -8,10 +8,15 @@ public class UserAccount extends MappedModel {
 
 	private String username;
 	private String password;
-
+	private String role;
 	
 	@OneToOne
 	private Person person = new Person();
+	
+	
+	public UserAccount() {
+		//person = new Person();
+	}
 	
 	public String getUsername() {
 		return username;
@@ -31,7 +36,12 @@ public class UserAccount extends MappedModel {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	
 	
 	

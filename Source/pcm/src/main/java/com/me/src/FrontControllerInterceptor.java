@@ -21,6 +21,7 @@ public class FrontControllerInterceptor extends HandlerInterceptorAdapter {
 		 //business.getSessionManagementServer().validateSession(request);
 		return super.preHandle(request, response, handler);
 	}
+	
 
 	@Override
 	public void postHandle(HttpServletRequest request,

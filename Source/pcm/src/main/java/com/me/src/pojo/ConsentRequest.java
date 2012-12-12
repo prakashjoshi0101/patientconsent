@@ -1,13 +1,27 @@
 package com.me.src.pojo;
 
-public class ConsentRequest {
-	private Patient patient;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class ConsentRequest extends MappedModel {
+	@OneToOne
+	private Patient patient = new Patient();
 	private String consentType;
 	private String recordType;
-	private Hospital recordRequester; // entity trying to request medical records
-	private Hospital recordProvider;  // entity who has medical records
-	private UserAccount requestByUser;
-	private UserAccount respondByUser;
+	
+	@OneToOne
+	private Hospital recordRequester = new Hospital(); // entity trying to request medical records
+	
+	@OneToOne
+	private Hospital recordProvider = new Hospital();  // entity who has medical records
+	
+	@OneToOne
+	private UserAccount requestByUser = new UserAccount();
+	
+	@OneToOne
+	private UserAccount respondByUser = new UserAccount();
+	
 	public Patient getPatient() {
 		return patient;
 	}

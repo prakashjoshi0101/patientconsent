@@ -2,13 +2,22 @@ package com.me.src.pojo;
 
 import java.util.Date;
 
-public class Consent {
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Consent extends MappedModel {
+	@OneToOne
 	private Hospital hospital;
-	private Patient patient; // consent for patient
-	private Date date;
+	
+	@OneToOne
+	private Patient patient = new Patient(); // consent for patient
+	private Date date = new Date();
 	private String consentType;
 	private String recordType;
 	private boolean status; // true=active, false=disabled
+	
+	@OneToOne
 	private UserAccount consentCreatedBy; // can be user can patient or proxy (doctor)
 	
 	public Hospital getHospital() {

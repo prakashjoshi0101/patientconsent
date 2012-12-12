@@ -1,13 +1,9 @@
 package com.me.src;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -51,13 +47,19 @@ public class LoginController {
 	@Autowired
 	UserAccountDao userAccountDao;
 	
+	@RequestMapping(method = RequestMethod.GET)
+	public String initForm(ModelMap model) {
+		UserAccount ua = new UserAccount();
+		model.addAttribute("userAccount", ua);
+		return "login";
+	}
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	//public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
-	public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
+	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status){
 		logger.info("Login controller");
 		//String username = (String)request.getParameter("username");
 		//String password = (String)request.getParameter("password");
@@ -85,26 +87,6 @@ public class LoginController {
 //		patientDao.saveOrUpdate(new Patient());
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
-		return "global-admin-success";
-	}
-	
-	@RequestMapping(method = RequestMethod.GET)
-	public String initForm(ModelMap model) {
-		UserAccount ua = new UserAccount();
-		model.addAttribute("userAccount", ua);
-		return "login";
-	}
-	
-	@RequestMapping(method = RequestMethod.POST)
-	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status) {
- 
-		logger.info(userAccount.getUsername() + "  " + userAccount.getPassword());
-		
-		//clear the command object from the session
-		status.setComplete(); 
- 
-		//return form success view
-		return "global-admin";
-	}
-	
+		return "global-admin/home";
+	}		
 }

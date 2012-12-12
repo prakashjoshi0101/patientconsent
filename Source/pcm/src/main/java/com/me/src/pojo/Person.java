@@ -1,4 +1,3 @@
-
 package com.me.src.pojo;
 
 import java.util.Date;
@@ -12,7 +11,6 @@ public class Person extends MappedModel {
 	private String firstName;
 	private String lastName;
 	private boolean gender;
-	private String role;
 	private Date dob = new Date();
 	private String address;
 	private String phone;
@@ -76,14 +74,6 @@ public class Person extends MappedModel {
 	}
 	public void setHospital(Hospital hospital) {
 		this.hospital = hospital;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
-	
-	
+	}	
 	
 }

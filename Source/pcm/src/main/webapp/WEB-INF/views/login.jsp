@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
@@ -60,27 +59,25 @@ a:hover
 <div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:96px;top:59px;width:549px;height:193px;text-align:left;z-index:1;">
 <img src="resources/images/home.png" id="Image1" alt="" align="top" border="0" style="width:549px;height:193px;"></div>
 <div id="bv_Login1" style="margin:0;padding:0;position:absolute;left:567px;top:261px;width:253px;height:150px;text-align:right;z-index:2;">
-<form:form commandName="userAccount" name="userAccount" method="post" action="/pcm/" id="loginform">
+<form:form commandName="userAccount" method="post" action="login.htm" id="loginform">
 <table cellspacing="4" cellpadding="0" style="background-color:#EFF6FF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;width:253px;height:150px;">
 <tr>
    <td colspan="2" align="center" style="height:17px;background-color:#BFDBFF;color:#006BF5;">Log In</td>
+   <form:errors path="*"/>   
 </tr>
 <tr>
    <td align="right" style="height:20px;width:103px">User Name:</td>
-   <td align="left"><form:input path="username" type="text" id="username" value="" style="width:100px;height:18px;background-color:#FFFFFF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;"></form:input>   
-   </td>
+   <td align="left"><form:input path="username" type="text" id="username" value="" style="width:100px;height:18px;background-color:#FFFFFF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;"/></td>
 </tr>
 <tr>
    <td align="right" style="height:20px">Password:</td>
-   <td align="left"><form:input path="password" type="password" id="password" value="" style="width:100px;height:18px;px;background-color:#FFFFFF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;"/>   
-   </td>
+   <td align="left"><form:input path="password" type="password" id="password" value="" style="width:100px;height:18px;px;background-color:#FFFFFF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;"/></td>
 </tr>
 <tr>
    <td>&nbsp;</td><td style="height:20px" align="left"><input id="rememberme" type="checkbox" name="rememberme">Remember me</td>
 </tr>
 <tr>
    <td>&nbsp;</td><td align="left" valign="bottom"><input type="submit" name="login" value="Log In" id="login" style="color:#006BF5;background-color:#FFFFFF;border-color:#BFDBFF;border-width:1px;border-style:solid;font-family:Verdana;font-size:11px;width:70px;height:20px;"></td>
-   <form:errors path="*"/>
 </tr>
 </table>
 </form:form>
@@ -92,33 +89,3 @@ a:hover
 </div>
 </body>
 </html>
-=======
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
-<html>
-<head>
-<title>Home</title>
-</head>
-<body>
-	<h1>Login secure website!!!</h1>
-
-	<form method="POST" action="login.htm">
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><input type="text" name="username" size="15" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password" size="15" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" value="Login" /></td>
-			</tr>
-
-		</table>
-	</form>
-
-</body>
-</html>
->>>>>>> parent of 2428c1c... .

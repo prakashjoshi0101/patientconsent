@@ -5,9 +5,7 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>Welcome to secure website!!!</h1>
-
-	<a href="home.htm">Login</a>	
+	<h1>Welcome to secure website!!!</h1>		
 
 </body>
 </html>
