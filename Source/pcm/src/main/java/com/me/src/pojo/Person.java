@@ -1,17 +1,26 @@
+
 package com.me.src.pojo;
 
 import java.util.Date;
 
-public class Person {
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Person extends MappedModel {
+	
 	private String firstName;
 	private String lastName;
-	private String gender;
-	private Date dob;
+	private boolean gender;
+	private String role;
+	private Date dob = new Date();
 	private String address;
 	private String phone;
 	private String ssn;
 	private String emailId;	
-	private String role;
+	
+	@OneToOne
+	private Hospital hospital;
 	
 	
 	public String getFirstName() {
@@ -26,10 +35,10 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String isGender() {
+	public boolean isGender() {
 		return gender;
 	}
-	public void setGender(String gender) {
+	public void setGender(boolean gender) {
 		this.gender = gender;
 	}
 	public Date getDob() {
@@ -56,17 +65,25 @@ public class Person {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 	public String getEmailId() {
 		return emailId;
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
+	public Hospital getHospital() {
+		return hospital;
+	}
+	public void setHospital(Hospital hospital) {
+		this.hospital = hospital;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
 	
 }
