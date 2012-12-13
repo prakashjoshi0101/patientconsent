@@ -88,6 +88,6 @@ public class LoginController {
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
 		logger.info("Username & Password: " + userAccount.getUsername() + " - " + userAccount.getPassword());
-		return "doctor/home";
+		return "patient/home";
 	}		
 }
