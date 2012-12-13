@@ -1,4 +1,4 @@
-package com.me.src.globaladmin;
+package com.me.src;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

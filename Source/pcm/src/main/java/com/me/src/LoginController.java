@@ -60,7 +60,7 @@ public class LoginController {
 	//public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
 	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status){
-		logger.info("Login controller2222");
+		logger.info("Login controller");
 		//String username = (String)request.getParameter("username");
 		//String password = (String)request.getParameter("password");
 		
@@ -87,6 +87,6 @@ public class LoginController {
 //		patientDao.saveOrUpdate(new Patient());
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
-		return "admin/home";		
+		return "admin/home";
 	}		
 }

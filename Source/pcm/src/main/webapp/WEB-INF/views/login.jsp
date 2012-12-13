@@ -57,7 +57,7 @@ a:hover
 <div id="Html1" style="position:absolute;left:6px;top:46px;width:994px;height:755px;z-index:0">
 </div>
 <div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:96px;top:59px;width:549px;height:193px;text-align:left;z-index:1;">
-<img src="resources/images/home.png" id="Image1" alt="" align="top" border="0" style="width:549px;height:193px;"></div>
+<img src="resources/images/home_old.png" id="Image1" alt="" align="top" border="0" style="width:749px;height:193px;"></div>
 <div id="bv_Login1" style="margin:0;padding:0;position:absolute;left:567px;top:261px;width:253px;height:150px;text-align:right;z-index:2;">
 <form:form commandName="userAccount" method="post" action="login.htm" id="loginform">
 <table cellspacing="4" cellpadding="0" style="background-color:#EFF6FF;border-color:#BFDBFF;border-width:1px;border-style:solid;color:#006BF5;font-family:Verdana;font-size:11px;width:253px;height:150px;">
@@ -85,7 +85,7 @@ a:hover
 <div id="bv_Image2" style="margin:0;padding:0;position:absolute;left:119px;top:261px;width:425px;height:296px;text-align:left;z-index:3;">
 <img src="resources/images/login.jpg" id="Image2" alt="" align="top" border="0" style="width:425px;height:296px;"></div>
 <div id="bv_Image3" style="margin:0;padding:0;position:absolute;left:668px;top:168px;width:200px;height:71px;text-align:left;z-index:4;">
-<img src="resources/images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
+<!-- <img src="resources/images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"> --></div>
 </div>
 </body>
 </html>
