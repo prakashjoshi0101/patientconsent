@@ -57,18 +57,18 @@ a:hover
 <div id="bv_Form1" style="position:absolute;background-color:#F0F0F0;left:400px;top:372px;width:583px;height:523px;z-index:3">
 <form name="HospitalAdmin" method="post" action="" enctype="text/plain" id="Form1">
 <div id="bv_Image4" style="margin:0;padding:0;position:absolute;left:98px;top:78px;width:101px;height:101px;text-align:left;z-index:0;">
-<img src="resources/images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
+<img src="images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
 <div id="bv_TextMenu1" style="margin:0;padding:0;position:absolute;left:208px;top:112px;width:106px;height:34px;text-align:center;z-index:1;">
 <font style="font-size:13px;" color="#000000" face="Arial">
 <a href="create-patient.jsp">create-patient</a><br><a href="create-patient.jsp">create-doctor</a></font></div>
 </form>
 </div>
 <div id="bv_Image2" style="margin:0;padding:0;position:absolute;left:18px;top:372px;width:365px;height:322px;text-align:left;z-index:4;">
-<img src="resources/images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
+<img src="images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
 <div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:17px;top:53px;width:968px;height:310px;text-align:left;z-index:5;">
-<img src="resources/images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
+<img src="images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
 <div id="bv_Image3" style="margin:0;padding:0;position:absolute;left:88px;top:752px;width:200px;height:71px;text-align:left;z-index:6;">
-<img src="resources/images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
+<img src="images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
 </div>
 </body>
 </html>

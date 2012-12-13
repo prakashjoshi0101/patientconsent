@@ -87,6 +87,6 @@ public class LoginController {
 //		patientDao.saveOrUpdate(new Patient());
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
-		return "admin/home";
+		return "global-admin/home";
 	}		
 }

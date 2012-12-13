@@ -246,17 +246,17 @@ function ValidateHospitalAdmin(theForm)
 <font style="font-size:13px" color="#000000" face="Arial">Doctor Password</font></div>
 <input type="submit" id="Button1" name="Register" value="Submit" style="position:absolute;left:286px;top:363px;width:75px;height:24px;font-family:Arial;font-size:13px;z-index:20">
 <div id="bv_Image4" style="margin:0;padding:0;position:absolute;left:69px;top:72px;width:101px;height:101px;text-align:left;z-index:21;">
-<img src="resources/images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
+<img src="images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
 <div id="bv_Text2" style="margin:0;padding:0;position:absolute;left:250px;top:115px;width:139px;height:22px;text-align:left;z-index:22;">
 <font style="font-size:19px" color="#000000" face="Arial"><b>Doctor Details</b></font></div>
 </form>
 </div>
 <div id="bv_Image2" style="margin:0;padding:0;position:absolute;left:18px;top:372px;width:365px;height:322px;text-align:left;z-index:25;">
-<img src="resources/images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
+<img src="images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
 <div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:17px;top:53px;width:968px;height:310px;text-align:left;z-index:26;">
-<img src="resources/images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
+<img src="images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
 <div id="bv_Image3" style="margin:0;padding:0;position:absolute;left:88px;top:752px;width:200px;height:71px;text-align:left;z-index:27;">
-<img src="resources/images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
+<img src="images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
 </div>
 </body>
 </html>
