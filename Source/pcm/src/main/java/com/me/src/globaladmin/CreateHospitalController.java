@@ -1,4 +1,4 @@
-package com.me.src;
+package com.me.src.globaladmin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.me.src.pojo.Hospital;
-import com.me.src.pojo.HospitalEnterprise;
+import com.me.src.pojo.command.HospitalEnterprise;
 
 @Controller
 @RequestMapping("/create-hospital.htm")
@@ -28,6 +27,7 @@ public class CreateHospitalController {
 	@RequestMapping(method = RequestMethod.POST)
 	public String processSubmit(@ModelAttribute("hospitalEnterprise") HospitalEnterprise hospitalEnterprise, BindingResult result, SessionStatus status) {		
 	
+		logger.info("Hospital Name" + hospitalEnterprise.getHospital().getName());
 		return "global-admin/success";
 	}
 	

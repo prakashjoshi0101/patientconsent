@@ -87,6 +87,7 @@ public class LoginController {
 //		patientDao.saveOrUpdate(new Patient());
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
-		return "global-admin/home";
+		logger.info("Username & Password: " + userAccount.getUsername() + " - " + userAccount.getPassword());
+		return "doctor/home";
 	}		
 }

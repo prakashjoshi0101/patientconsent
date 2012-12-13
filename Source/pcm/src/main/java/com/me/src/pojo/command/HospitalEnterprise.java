@@ -1,4 +1,8 @@
-package com.me.src.pojo;
+package com.me.src.pojo.command;
+
+import com.me.src.pojo.Hospital;
+import com.me.src.pojo.Person;
+import com.me.src.pojo.UserAccount;
 
 public class HospitalEnterprise {
 

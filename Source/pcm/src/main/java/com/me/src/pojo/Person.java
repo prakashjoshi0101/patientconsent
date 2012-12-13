@@ -21,6 +21,11 @@ public class Person extends MappedModel {
 	private Hospital hospital;
 	
 	
+	
+	public Person() {
+		dob = new Date();
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
