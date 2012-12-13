@@ -14,9 +14,7 @@ import org.springframework.web.bind.support.SessionStatus;
 import com.me.src.dao.HospitalDao;
 import com.me.src.dao.PersonDao;
 import com.me.src.dao.UserAccountDao;
-import com.me.src.pojo.Person;
 import com.me.src.pojo.Role;
-import com.me.src.pojo.UserAccount;
 import com.me.src.pojo.command.HospitalEnterprise;
 
 @Controller
