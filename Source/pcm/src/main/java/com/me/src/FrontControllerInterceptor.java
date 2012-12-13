@@ -16,20 +16,16 @@ public class FrontControllerInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		// TODO Auto-generated method stub
-		logger.info("preHandle()");		
-							
-		 //business.getSessionManagementServer().validateSession(request);
+		logger.info("preHandle()");
 		return super.preHandle(request, response, handler);
 	}
-	
 
 	@Override
 	public void postHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 		// TODO Auto-generated method stub
-		logger.info("postHandle()");
-		
+		logger.info("postHandle()");		
 		super.postHandle(request, response, handler, modelAndView);
 	}
 }

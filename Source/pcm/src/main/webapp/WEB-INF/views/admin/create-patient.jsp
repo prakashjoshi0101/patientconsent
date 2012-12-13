@@ -205,9 +205,9 @@ function ValidateHospitalAdmin(theForm)
 <body>
 <div id="space"><br></div>
 <div id="container">
-<div id="Html1" style="position:absolute;left:6px;top:46px;width:994px;height:873px;z-index:23">
+<div id="Html1" style="position:absolute;left:6px;top:46px;width:994px;height:873px;z-index:25">
 </div>
-<div id="bv_Form1" style="position:absolute;background-color:#F0F0F0;left:400px;top:372px;width:583px;height:523px;z-index:24">
+<div id="bv_Form1" style="position:absolute;background-color:#F0F0F0;left:400px;top:372px;width:583px;height:523px;z-index:26">
 <form name="HospitalAdmin" method="post" action="" enctype="text/plain" id="Form1" onsubmit="return ValidateHospitalAdmin(this)">
 <input type="text" id="Editbox4" style="position:absolute;left:394px;top:167px;width:148px;height:20px;border:1px #C0C0C0 solid;font-family:'Courier New';font-size:16px;z-index:0" name="Editbox4" value="" maxlength="20">
 <div id="bv_Text4" style="margin:0;padding:0;position:absolute;left:275px;top:171px;width:103px;height:32px;text-align:left;z-index:1;">
@@ -241,22 +241,25 @@ function ValidateHospitalAdmin(theForm)
 <div id="bv_Text13" style="margin:0;padding:0;position:absolute;left:280px;top:312px;width:103px;height:32px;text-align:left;z-index:17;">
 <font style="font-size:13px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Gender</font></div>
 <div id="bv_Text6" style="margin:0;padding:0;position:absolute;left:29px;top:171px;width:113px;height:16px;text-align:left;z-index:18;">
-<font style="font-size:13px" color="#000000" face="Arial">Doctor Username</font></div>
+<font style="font-size:13px" color="#000000" face="Arial">Patient Username</font></div>
 <div id="bv_Text7" style="margin:0;padding:0;position:absolute;left:29px;top:206px;width:113px;height:16px;text-align:left;z-index:19;">
-<font style="font-size:13px" color="#000000" face="Arial">Doctor Password</font></div>
+<font style="font-size:13px" color="#000000" face="Arial">Patient Password</font></div>
 <input type="submit" id="Button1" name="Register" value="Submit" style="position:absolute;left:286px;top:363px;width:75px;height:24px;font-family:Arial;font-size:13px;z-index:20">
 <div id="bv_Image4" style="margin:0;padding:0;position:absolute;left:69px;top:72px;width:101px;height:101px;text-align:left;z-index:21;">
-<img src="images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
-<div id="bv_Text2" style="margin:0;padding:0;position:absolute;left:250px;top:115px;width:139px;height:22px;text-align:left;z-index:22;">
-<font style="font-size:19px" color="#000000" face="Arial"><b>Doctor Details</b></font></div>
+<img src="resources/images/admin-icon-om.png" id="Image4" alt="" align="top" border="0" style="width:101px;height:101px;"></div>
+<input type="file" id="FileUpload1" style="position:absolute;left:272px;top:125px;width:148px;height:20px;font-family:Courier New;font-size:13px;z-index:22" name="FileUpload1">
+<div id="bv_Text1" style="margin:0;padding:0;position:absolute;left:164px;top:131px;width:103px;height:16px;text-align:left;z-index:23;">
+<font style="font-size:13px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Image</font></div>
+<div id="bv_Text2" style="margin:0;padding:0;position:absolute;left:232px;top:79px;width:139px;height:22px;text-align:left;z-index:24;">
+<font style="font-size:19px" color="#000000" face="Arial"><b>Patient Details</b></font></div>
 </form>
 </div>
-<div id="bv_Image2" style="margin:0;padding:0;position:absolute;left:18px;top:372px;width:365px;height:322px;text-align:left;z-index:25;">
-<img src="images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
-<div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:17px;top:53px;width:968px;height:310px;text-align:left;z-index:26;">
-<img src="images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
-<div id="bv_Image3" style="margin:0;padding:0;position:absolute;left:88px;top:752px;width:200px;height:71px;text-align:left;z-index:27;">
-<img src="images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
+<div id="bv_Image2" style="margin:0;padding:0;position:absolute;left:18px;top:372px;width:365px;height:322px;text-align:left;z-index:27;">
+<img src="resources/images/hospital.jpg" id="Image2" alt="" align="top" border="0" style="width:365px;height:322px;"></div>
+<div id="bv_Image1" style="margin:0;padding:0;position:absolute;left:17px;top:53px;width:968px;height:310px;text-align:left;z-index:28;">
+<img src="resources/images/hospital-art-toy.jpg" id="Image1" alt="" align="top" border="0" style="width:968px;height:310px;"></div>
+<div id="bv_Image3" style="margin:0;padding:0;position:absolute;left:88px;top:752px;width:200px;height:71px;text-align:left;z-index:29;">
+<img src="resources/images/hippa.jpg" id="Image3" alt="" align="top" border="0" style="width:200px;height:71px;"></div>
 </div>
 </body>
 </html>
