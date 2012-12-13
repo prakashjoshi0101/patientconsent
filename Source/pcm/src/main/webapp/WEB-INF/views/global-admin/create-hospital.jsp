@@ -356,7 +356,7 @@ a:hover {
 					<img src="resources/images/admin-icon-om.png" id="Image4" alt=""
 						align="top" border="0" style="width: 101px; height: 101px;">
 				</div>
-				<form:textarea path="userAccount.person.address" name="TextArea1"
+				<form:textarea path="hospital.address" name="TextArea1"
 					id="TextArea1"
 					style="position:absolute;left:378px;top:154px;width:147px;height:89px;border:1px #C0C0C0 solid;font-family:'Courier New';font-size:16px;z-index:27"
 					rows="3" cols="11"></form:textarea>

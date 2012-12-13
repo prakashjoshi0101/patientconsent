@@ -11,8 +11,8 @@ public class Consent extends MappedModel {
 	private Hospital hospital;
 	
 	@OneToOne
-	private Patient patient = new Patient(); // consent for patient
-	private Date date = new Date();
+	private Patient patient; // consent for patient
+	private Date date;
 	private String consentType;
 	private String recordType;
 	private boolean status; // true=active, false=disabled

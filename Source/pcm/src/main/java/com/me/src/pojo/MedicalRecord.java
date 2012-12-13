@@ -8,10 +8,10 @@ import javax.persistence.OneToOne;
 @Entity
 public class MedicalRecord extends MappedModel {
 	@OneToOne
-	private Patient patient = new Patient();
+	private Patient patient;
 	@OneToOne
-	private Doctor doctor = new Doctor();
-	private Date date = new Date();
+	private Doctor doctor;
+	private Date date;
 	private String description;
 	private String prescription;
 	private String recordType; // brain, accident, mental

@@ -11,7 +11,7 @@ public class Person extends MappedModel {
 	private String firstName;
 	private String lastName;
 	private boolean gender;
-	private Date dob = new Date();
+	private Date dob;
 	private String address;
 	private String phone;
 	private String ssn;

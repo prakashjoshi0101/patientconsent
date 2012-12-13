@@ -13,7 +13,6 @@ public class UserAccount extends MappedModel {
 	@OneToOne
 	private Person person = new Person();
 	
-	
 	public UserAccount() {
 		//person = new Person();
 	}
@@ -42,7 +41,5 @@ public class UserAccount extends MappedModel {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
-	
-	
+
 }

@@ -20,7 +20,7 @@ public abstract class MappedModelDao<T extends MappedModel> {
 	public abstract Class<T> getActualClass();
 
 	@SuppressWarnings("unchecked")
-	public T findById(String id) {
+	public T findById(long id) {
 		Session session = sessionFactory.getCurrentSession();
 		return (T) session.get(getActualClass(), id);
 	}
