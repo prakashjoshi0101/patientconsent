@@ -104,6 +104,7 @@ public class LoginController {
 	}	
 	
 	
+	@SuppressWarnings("deprecation")
 	public void initGlobalAdmin() {
 		
 		Person person = new Person();

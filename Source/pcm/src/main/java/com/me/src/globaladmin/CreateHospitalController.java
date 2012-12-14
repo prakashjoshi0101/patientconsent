@@ -43,11 +43,17 @@ public class CreateHospitalController {
 	
 		logger.info("Hospital Name" + hospitalEnterprise.getHospital().getName());
 		
+		if(userAccountDao.isUsernameExist(hospitalEnterprise.getUserAccount().getUsername().toLowerCase())) {
+			result.reject("username", "Username already exist");
+			return "global-admin/create-hospital";
+		}
+		
 		hospitalDao.saveOrUpdate(hospitalEnterprise.getHospital());
 		personDao.saveOrUpdate(hospitalEnterprise.getUserAccount().getPerson());
 		hospitalEnterprise.getUserAccount().setRole(Role.Admin.toString());
 		userAccountDao.saveOrUpdate(hospitalEnterprise.getUserAccount());
 		
-		return "global-admin/success";
-	}	
+		
+		return "global-admin/home";
+	}
 }

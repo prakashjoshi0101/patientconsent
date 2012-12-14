@@ -6,6 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="resources/style.css"/>
+
 <title>Login</title>
 <meta name="GENERATOR"
 	content="Created by BlueVoda Website builder http://www.bluevoda.com">
@@ -351,6 +353,9 @@ a:hover {
 				</div>
 				<input type="submit" id="Button1" name="Register" value="Submit"
 					style="position: absolute; left: 270px; top: 455px; width: 75px; height: 24px; font-family: Arial; font-size: 13px; z-index: 25">
+					
+				<br/>
+				<form:errors path="*" cssClass="error"></form:errors>	
 				<div id="bv_Image4"
 					style="margin: 0; padding: 0; position: absolute; left: 98px; top: 78px; width: 101px; height: 101px; text-align: left; z-index: 26;">
 					<img src="resources/images/admin-icon-om.png" id="Image4" alt=""
