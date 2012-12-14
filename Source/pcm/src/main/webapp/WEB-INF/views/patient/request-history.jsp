@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<!-- nihar change -->
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<!-- nihar change -->
+
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -85,14 +90,23 @@ a:hover {
 			<div id="bv_Table1"
 				style="margin: 0; padding: 0; position: absolute; left: 57px; top: 120px; width: 491px; height: 150px; text-align: left; z-index: 3;">
 
-				<table
-					style="position: absolute; left: 400px; top: 372px; width: 493px; height: 152px; z-index: 3; border: 1px #C0C0C0 solid;"
-					cellpadding="2" cellspacing="2" id="Table1">
-					<tr>
-						<td align="left" valign="top"
-							style="border: 1px #C0C0C0 solid; height: 140px;">&nbsp;</td>
-					</tr>
-				</table>
+				<!-- nihar changes -->
+				<c:if test="${!empty requests}">
+					<table border=1 width="100%">
+						<c:forEach items="${requests}" var="pl">
+						
+							<tr>
+								<td>${pl.consentType}
+								</td>
+								
+								<td>${pl.recordType}
+								</td>
+							</tr>
+							
+						</c:forEach>
+					</table>
+				</c:if>
+				<!-- nihar changes -->
 			</div>
 
 		</div>

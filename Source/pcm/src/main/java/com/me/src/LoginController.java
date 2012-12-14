@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -57,9 +58,11 @@ public class LoginController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	//nihar addded model in function parameters
+	
 	//public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
-	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status){
+	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status,Model model){
 		logger.info("Login controller");
 		//String username = (String)request.getParameter("username");
 		//String password = (String)request.getParameter("password");
@@ -88,6 +91,14 @@ public class LoginController {
 //		userAccountDao.saveOrUpdate(new UserAccount());
 		
 		logger.info("Username & Password: " + userAccount.getUsername() + " - " + userAccount.getPassword());
-		return "patient/home";
+		
+		//nihar changes
+		
+		model.addAttribute("patientlist",patientDao.findAll());
+		/*model.addAttribute("patientlist",patientDao.listPatient(1));*/
+		
+		//nihar changes
+		
+		return "doctor/home";
 	}		
 }

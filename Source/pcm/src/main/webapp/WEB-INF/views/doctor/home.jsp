@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<!-- nihar change -->
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<!-- nihar change -->
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -94,9 +99,20 @@ a:hover {
 
 				<div
 					style="position: absolute; left: 235px; top: 142px; width: 148px; height: 18px; border: 1px #C0C0C0 solid; z-index: 2">
-					<select name="patientList" size="1" id="Combobox1"
-						style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border-width: 0px; font-family: 'Courier New'; font-size: 16px;">
-					</select>
+
+					<!-- nihar change -->
+					<c:if test="${!empty patientlist}">
+						<select name="patientList" id="Combobox1"
+							style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border-width: 0px; font-family: 'Courier New'; font-size: 16px;">
+							<c:forEach items="${patientlist}" var="pl">
+
+								<option value="${pl.id}">${pl.id}</option>
+
+							</c:forEach>
+						</select>
+					</c:if>
+					<!-- nihar change -->
+
 				</div>
 				<div id="bv_Text1"
 					style="margin: 0; padding: 0; position: absolute; left: 248px; top: 105px; width: 122px; height: 22px; text-align: left; z-index: 3;">
