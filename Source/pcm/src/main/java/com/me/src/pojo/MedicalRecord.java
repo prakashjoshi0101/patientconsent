@@ -14,7 +14,7 @@ public class MedicalRecord extends MappedModel {
 	private Date date;
 	private String description;
 	private String prescription;
-	private String recordType; // brain, accident, mental
+	private Integer recordType; // brain, accident, mental
 		
 	public Patient getPatient() {
 		return patient;
@@ -46,12 +46,15 @@ public class MedicalRecord extends MappedModel {
 	public void setPrescription(String prescription) {
 		this.prescription = prescription;
 	}
-	public String getRecordType() {
+	
+	public Integer getRecordType() {
 		return recordType;
 	}
-	public void setRecordType(String recordType) {
+	public void setRecordType(Integer recordType) {
 		this.recordType = recordType;
 	}
+	
+	
 	
 	
 }

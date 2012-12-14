@@ -7,7 +7,7 @@ import javax.persistence.OneToOne;
 public class Patient extends MappedModel {
 	@OneToOne
 	private Person person;
-	private String photoFile;
+	//private String photoFile;
 	
 	public Person getPerson() {
 		return person;
@@ -15,12 +15,12 @@ public class Patient extends MappedModel {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-	public String getPhotoFile() {
-		return photoFile;
-	}
-	public void setPhotoFile(String photoFile) {
-		this.photoFile = photoFile;
-	}	
+//	public String getPhotoFile() {
+//		return photoFile;
+//	}
+//	public void setPhotoFile(String photoFile) {
+//		this.photoFile = photoFile;
+//	}	
 	
 	
 }

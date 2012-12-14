@@ -47,8 +47,7 @@ public class PatientCreateConsentController {
 		consent.setDate(new Date());
 		consent.setConsentCreatedBy(userAccountDao.findById(2));
 		consent.setPatient(patientDao.findById(1));
-		consent.setHospital(hospitalDao.findById(1));
-		consent.setStatus(true);
+		consent.setHospital(hospitalDao.findById(1));		
 		consentDao.saveOrUpdate(consent);
 		
 		return "patient/home";

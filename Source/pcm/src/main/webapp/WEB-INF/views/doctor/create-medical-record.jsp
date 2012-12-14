@@ -134,17 +134,17 @@ a:hover {
 					<form:select path="recordType" name="recordType" size="1"
 						id="Combobox1"
 						style="position:absolute;left:0px;top:0px;width:100%;height:100%;border-width:0px;font-family:'Courier New';font-size:16px;">
-						<option value="general">general</option>
-						<option value="respiratory">respiratory</option>
-						<option value="oral">oral</option>
-						<option value="gastritis">gastritis</option>
-						<option value="skin">skin</option>
-						<option value="orthopedic">orthopedic</option>
-						<option value="cognitive">cognitive</option>
-						<option value="nerological">nerological</option>
-						<option value="eyenoseear">eyenoseear</option>
-						<option value="immunization">immunization</option>
-						<option value="allergy">allergy</option>
+						<option value="1">General</option>
+						<option value="2">Respiratory</option>
+						<option value="4">Oral</option>
+						<option value="8">Gastritis</option>
+						<option value="16">Skin</option>
+						<option value="32">Orthopedic</option>
+						<option value="64">Cognitive</option>
+						<option value="128">Neurological</option>
+						<option value="256">Eye Nose Ear</option>
+						<option value="512">Immunization</option>
+						<option value="1024">Allergy</option>
 					</form:select>
 				</div>
 

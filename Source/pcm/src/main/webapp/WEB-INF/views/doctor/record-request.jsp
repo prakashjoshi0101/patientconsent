@@ -122,8 +122,7 @@ a:hover {
 					style="position: absolute; left: 211px; top: 259px; width: 136px; height: 24px; font-family: Arial; font-size: 13px; z-index: 3">
 				<div id="bv_Text2"
 					style="margin: 0; padding: 0; position: absolute; left: 131px; top: 137px; width: 150px; height: 16px; text-align: left; z-index: 4;">
-					<font style="font-size: 13px" color="#000000" face="Arial">Select
-						Hospital</font>
+					<font style="font-size: 13px" color="#000000" face="Arial">Select Hospital</font>
 				</div>
 				<div id="bv_Text3"
 					style="margin: 0; padding: 0; position: absolute; left: 132px; top: 223px; width: 150px; height: 16px; text-align: left; z-index: 5;">

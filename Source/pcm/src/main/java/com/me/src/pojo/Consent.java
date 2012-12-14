@@ -14,8 +14,7 @@ public class Consent extends MappedModel {
 	private Patient patient; // consent for patient
 	private Date date;
 	private String consentType;
-	private String recordType;
-	private boolean status; // true=active, false=disabled
+	private String recordType;	
 	
 	@OneToOne
 	private UserAccount consentCreatedBy; // can be user can patient or proxy (doctor)
@@ -50,12 +49,7 @@ public class Consent extends MappedModel {
 	public void setRecordType(String recordType) {
 		this.recordType = recordType;
 	}
-	public boolean isStatus() {
-		return status;
-	}
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+	
 	public UserAccount getConsentCreatedBy() {
 		return consentCreatedBy;
 	}

@@ -8,7 +8,7 @@ public class ConsentRequest extends MappedModel {
 	@OneToOne
 	private Patient patient;
 	private String consentType;
-	private String recordType;
+	private Integer recordType;
 	
 	@OneToOne
 	private Hospital recordRequester; // entity trying to request medical records
@@ -34,10 +34,10 @@ public class ConsentRequest extends MappedModel {
 	public void setConsentType(String consentType) {
 		this.consentType = consentType;
 	}
-	public String getRecordType() {
+	public Integer getRecordType() {
 		return recordType;
 	}
-	public void setRecordType(String recordType) {
+	public void setRecordType(Integer recordType) {
 		this.recordType = recordType;
 	}
 	public Hospital getRecordRequester() {

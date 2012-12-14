@@ -71,8 +71,8 @@ a:hover {
 		</div>
 		<div id="bv_Form1"
 			style="position: absolute; background-color: #F0F0F0; left: 400px; top: 372px; width: 583px; height: 523px; z-index: 8">
-			<form:form commandName="consent" method="post" action="patient-create-consent.htm"
-				id="Form1">
+			<form:form commandName="consent" method="post"
+				action="patient-create-consent.htm" id="Form1">
 
 				<div id="bv_Image4"
 					style="margin: 0; padding: 0; position: absolute; left: 24px; top: 30px; width: 101px; height: 101px; text-align: left; z-index: 0;">
@@ -87,20 +87,20 @@ a:hover {
 				<div
 					style="position: absolute; left: 313px; top: 134px; width: 148px; height: 18px; border: 1px #C0C0C0 solid; z-index: 2">
 
-					<form:select path="recordType" name="recordType"  size="1"
+					<form:select path="recordType" name="recordType" size="1"
 						id="Combobox1"
 						style="position:absolute;left:0px;top:0px;width:100%;height:100%;border-width:0px;font-family:'Courier New';font-size:16px;">
-						<option value="general">general</option>
-						<option value="respiratory">respiratory</option>
-						<option value="oral">oral</option>
-						<option value="gastritis">gastritis</option>
-						<option value="skin">skin</option>
-						<option value="orthopedic">orthopedic</option>
-						<option value="cognitive">cognitive</option>
-						<option value="nerological">nerological</option>
-						<option value="eyenoseear">eyenoseear</option>
-						<option value="immunization">immunization</option>
-						<option value="allergy">allergy</option>
+						<option value="1">General</option>
+						<option value="2">Respiratory</option>
+						<option value="4">Oral</option>
+						<option value="8">Gastritis</option>
+						<option value="16">Skin</option>
+						<option value="32">Orthopedic</option>
+						<option value="64">Cognitive</option>
+						<option value="128">Neurological</option>
+						<option value="256">Eye Nose Ear</option>
+						<option value="512">Immunization</option>
+						<option value="1024">Allergy</option>
 					</form:select>
 
 				</div>
@@ -122,8 +122,8 @@ a:hover {
 				<div
 					style="position: absolute; left: 315px; top: 216px; width: 148px; height: 18px; border: 1px #C0C0C0 solid; z-index: 6">
 
-					<form:select path="consentType" name="consentType"
-						size="1" id="Combobox2"
+					<form:select path="consentType" name="consentType" size="1"
+						id="Combobox2"
 						style="position:absolute;left:0px;top:0px;width:100%;height:100%;border-width:0px;font-family:'Courier New';font-size:16px;">
 						<option value="research">research</option>
 						<option value="shareinformation">shareinformation</option>
@@ -146,8 +146,8 @@ a:hover {
 		</div>
 		<div id="bv_Image1"
 			style="margin: 0; padding: 0; position: absolute; left: 6px; top: 48px; width: 993px; height: 279px; text-align: left; z-index: 11;">
-			<img src="resources/images/hospital-art-toy.jpg" id="Image1" alt="" align="top"
-				border="0" style="width: 993px; height: 279px;">
+			<img src="resources/images/hospital-art-toy.jpg" id="Image1" alt=""
+				align="top" border="0" style="width: 993px; height: 279px;">
 		</div>
 	</div>
 </body>

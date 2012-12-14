@@ -1,5 +1,7 @@
 package com.me.src;
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,8 @@ import com.me.src.dao.MedicalRecordDao;
 import com.me.src.dao.PatientDao;
 import com.me.src.dao.PersonDao;
 import com.me.src.dao.UserAccountDao;
+import com.me.src.pojo.Person;
+import com.me.src.pojo.Role;
 import com.me.src.pojo.UserAccount;
 
 /**
@@ -64,41 +68,59 @@ public class LoginController {
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
 	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status,Model model){
 		logger.info("Login controller");
-		//String username = (String)request.getParameter("username");
-		//String password = (String)request.getParameter("password");
 		
-//		model.addAttribute("username", username);
-//		model.addAttribute("password", password);
-//		
-//		Person person = new Person();
-//		person.setFirstName("Prakash");
-//		person.setLastName("Joshi");
-//		person.setAddress("194 Hillside");
-//		person.setDob(new Date());
-//		person.setEmailId("prakash@gmail.com");
-//		person.setGender(true);
-//		person.setPhone("617-314-1582");
-//		person.setSsn("123-45-678");
-//		
-//		personDao.saveOrUpdate(person);
-		
-//		doctorDao.saveOrUpdate(new Doctor());
-//		consentDao.saveOrUpdate(new Consent());
-//		consentRequestDao.saveOrUpdate(new ConsentRequest());
-//		hospitalDao.saveOrUpdate(new Hospital());
-//		medicalRecordDao.saveOrUpdate(new MedicalRecord());
-//		patientDao.saveOrUpdate(new Patient());
-//		userAccountDao.saveOrUpdate(new UserAccount());
-		
-		logger.info("Username & Password: " + userAccount.getUsername() + " - " + userAccount.getPassword());
+		// Initial Configuration
+		//initGlobalAdmin();
+				
+		logger.info("Username & Password: " + userAccount.getUsername() + " - " + userAccount.getPassword());		
 		
 		//nihar changes
 		
-		model.addAttribute("patientlist",patientDao.findAll());
+		//model.addAttribute("patientlist",patientDao.findAll());
 		/*model.addAttribute("patientlist",patientDao.listPatient(1));*/
 		
 		//nihar changes
 		
-		return "doctor/home";
-	}		
+		UserAccount ua = userAccountDao.getUserAccount(userAccount.getUsername().toLowerCase(), userAccount.getPassword());		
+		if(ua != null) {
+			if(ua.getRole().equals(Role.GlobalAdmin.toString())) {
+				return "global-admin/home";
+			}
+			else if(ua.getRole().equals(Role.Admin.toString())) {
+				return "admin/home";
+			}
+			else if(ua.getRole().equals(Role.Doctor.toString())) {
+				return "doctor/home";
+			}
+			else if(ua.getRole().equals(Role.Patient.toString())) {
+				return "patient/home";
+			}
+		}
+		
+		return "error";
+	}	
+	
+	
+	public void initGlobalAdmin() {
+		
+		Person person = new Person();
+		person.setFirstName("Thomas");
+		person.setLastName("Hardy");
+		person.setGender(true);
+		person.setPhone("857-245-1872");
+		person.setSsn("781-27-2837");
+		person.setEmailId("global@cms.org");
+		person.setAddress("500 Bolyston St, Boston");
+		person.setDob(new Date(1980, 11, 10));		
+				
+		personDao.saveOrUpdate(person);
+		
+		UserAccount ua = new UserAccount();
+		ua.setUsername("admin");
+		ua.setPassword("admin");
+		ua.setRole(Role.GlobalAdmin.toString());
+		ua.setPerson(person);
+				
+		userAccountDao.saveOrUpdate(ua);
+	}
 }
