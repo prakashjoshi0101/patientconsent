@@ -99,6 +99,6 @@
 	<!-- ANNOTATION DRIVEN TRANSACTIONS -->	
 	<tx:annotation-driven/>
 	
-	<context:annotation-config></context:annotation-config>
+	<!-- <context:annotation-config></context:annotation-config> -->
 	
 </beans>

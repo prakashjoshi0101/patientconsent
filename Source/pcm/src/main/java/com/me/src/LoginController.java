@@ -2,6 +2,8 @@ package com.me.src;
 
 import java.util.Date;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +68,7 @@ public class LoginController {
 	
 	//public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
-	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status,Model model){
+	public String processSubmit(@ModelAttribute("userAccount") UserAccount userAccount, BindingResult result, SessionStatus status,Model model, HttpSession session){
 		logger.info("Login controller");
 		
 		// Initial Configuration
@@ -83,6 +85,7 @@ public class LoginController {
 		
 		UserAccount ua = userAccountDao.getUserAccount(userAccount.getUsername().toLowerCase(), userAccount.getPassword());		
 		if(ua != null) {
+			session.setAttribute("userAccount", ua);
 			if(ua.getRole().equals(Role.GlobalAdmin.toString())) {
 				return "global-admin/home";
 			}
