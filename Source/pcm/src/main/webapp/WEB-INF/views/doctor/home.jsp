@@ -105,9 +105,7 @@ a:hover {
 						<select name="patientList" id="Combobox1"
 							style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border-width: 0px; font-family: 'Courier New'; font-size: 16px;">
 							<c:forEach items="${patientlist}" var="pl">
-
-								<option value="${pl.id}">${pl.id}</option>
-
+								<option value="${pl.id}">${pl.person.firstName} ${pl.person.lastName}</option>
 							</c:forEach>
 						</select>
 					</c:if>
